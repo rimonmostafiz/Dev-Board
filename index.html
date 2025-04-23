@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-[#F4F7FF]">
 
 <head>
     <meta charset="UTF-8">
@@ -7,10 +7,39 @@
     <title>Dev Board</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+          --color-rootBackground: #F4F7FF;
+          --color-rootTextColor: #00303C
+        }
+      </style>
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 
-<body>
-
+<body class="h-screen min-w-full">
+    <main class="container mx-auto">
+        <nav class="mb-6 mt-6">
+            <div class="flex justify-between navbar shadow-sm rounded-2xl border-1 min-h-24 bg-white">
+                <div class="flex justify-start items-center mt-6 mb-4.5">
+                    <img class="ml-6" src="./assets/logo.png" alt="">
+                    <h1 class="mx-auto ml-2 text-4xl font-light text-rootTextColor">Dev<b class="font-bold">Board</b>
+                    </h1>
+                </div>
+                <div class="flex justify-end">
+                    <div class="menu menu-horizontal px-1 gap-11">
+                        <div class="btn rounded-full w-30 h-18 bg-rootBackground">
+                            <img class="mx-auto w-8 h-8" src="./assets/checkbox.png" alt="">
+                            <h3 class="text-3xl ml-1.5 mr-1.5">23</h3>
+                        </div>
+                        <div class="relative w-20">
+                            <div class="shadow-xl absolute w-18 h-18 bg-rootBackground rounded-full"></div>
+                            <img class="w-12 h-12 absolute left-3 top-3" src="./assets/theme-btn.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </main>
 </body>
 
 </html>
