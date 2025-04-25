@@ -24,7 +24,7 @@ const colors = [
     'bg-zinc-200',
     'bg-neutral-200',
     'bg-stone-200'
-  ]
+]
 
 function setInitialTotalCompletedTaskCount(count) {
     document.getElementById('completed-task-count').textContent = count
@@ -94,8 +94,7 @@ function onClickBackroundColorButton(e) {
 }
 
 function onClickDiscoverCard(e) {
-    e.preventDefault()
-    window.location.href = './blog.html'
+    window.location.href = 'blog.html'
 }
 
 function handleCompletedButtonClickEvent() {
