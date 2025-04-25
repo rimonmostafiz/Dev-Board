@@ -94,7 +94,7 @@ function onClickBackroundColorButton(e) {
 }
 
 function onClickDiscoverCard(e) {
-    e.preventDefault
+    e.preventDefault()
     window.location.href = './blog.html'
 }
 
