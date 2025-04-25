@@ -94,6 +94,7 @@ function onClickBackroundColorButton(e) {
 }
 
 function onClickDiscoverCard(e) {
+    console.log("dragon was here!!")
     window.location.href = 'blog.html'
 }
 
