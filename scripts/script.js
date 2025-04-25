@@ -95,7 +95,6 @@ function onClickBackroundColorButton(e) {
 
 function onClickDiscoverCard(e) {
     e.preventDefault()
-    alert("dragon was here!!")
     window.location.href = 'blog.html'
 }
 
