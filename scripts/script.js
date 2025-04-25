@@ -69,7 +69,7 @@ function onClickCompletedButton(event) {
     this.disabled = true
     alert("Board Updated Successfully");
     if (document.getElementById('task-count').textContent == '1') {
-        alert('congrats!!! You have completed all the current task');
+        alert('congrats!!! You have completed all the current task')
     }
     updateCount('task-count', -1)
     updateCount('completed-task-count', 1)
@@ -90,7 +90,7 @@ function onClickBackroundColorButton(e) {
         color = getRandomcolor();
     }
     rootHtml.classList.remove(rootHtml.classList[0])
-    rootHtml.classList.add(color);
+    rootHtml.classList.add(color)
 }
 
 function onClickDiscoverCard(e) {
