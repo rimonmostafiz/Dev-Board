@@ -19,7 +19,7 @@
 <body class="h-screen min-w-full">
     <main class="container mx-auto">
         <nav class="mb-6 mt-6">
-            <div class="flex justify-between navbar shadow-sm rounded-2xl border-1 min-h-24 bg-white">
+            <div class="flex justify-between navbar shadow-sm rounded-2xl min-h-24 bg-white">
                 <div class="flex justify-start items-center mt-6 mb-4.5">
                     <img class="ml-6" src="./assets/logo.png" alt="">
                     <h1 class="mx-auto ml-2 text-4xl font-light text-rootTextColor">Dev<b class="font-bold">Board</b>
@@ -33,7 +33,8 @@
                         </div>
                         <div class="relative w-20">
                             <div class="shadow-xl absolute w-18 h-18 bg-rootBackground rounded-full"></div>
-                            <img id="backgroun-color-btn" class="w-12 h-12 absolute left-3 top-3 hover:cursor-pointer" src="./assets/theme-btn.png" alt="" />
+                            <img id="backgroun-color-btn" class="w-12 h-12 absolute left-3 top-3 hover:cursor-pointer"
+                                src="./assets/theme-btn.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -54,11 +55,11 @@
                                 <h3 id="task-count" class="text-4xl font-bold text-rootTextColor">05</h3>
                             </div>
                         </div>
-                        <div
-                            class="flex w-6/12 h-32 items-center rounded-xl bg-linear-45 from-[#3752FD] to-[#9BA8F8] p-5">
+                        <div id="discover-card"
+                            class="flex w-6/12 h-32 items-center rounded-xl bg-linear-45 from-[#3752FD] to-[#9BA8F8] p-5 hover:cursor-pointer">
                             <img class="size-20 shrink-0" src="./assets/board.png" alt="Board Logo" />
                             <div>
-                                <div id="discover-card" class="text-2xl font-medium text-white ml-6 hover:cursor-pointer">Discover Something <br>New Today!
+                                <div class="text-2xl font-medium text-white ml-6">Discover Something<br>New Today!
                                 </div>
                             </div>
                         </div>
@@ -73,6 +74,9 @@
                             </div>
                         </div>
                     </div>
+
+                    <hr class="border-t-2 border-dashed border-[#3752FD] opacity-20" />
+
                     <div class="grid grid-cols-3 p-6 gap-9">
                         <div class="bg-rootBackground rounded-md p-6">
                             <div class="bg-white p-2 text-center w-28.5 rounded-md mb-4">
@@ -209,17 +213,19 @@
                     </div>
                 </div>
                 <div class="w-100 h-205 rounded-lg bg-white">
-                    <div class="flex-row justify-items-center p-5">
+                    <div class="flex-row justify-items-center p-5 mt-7">
                         <div class="flex justify-normal items-center mb-4 gap-4 text-2xl">
                             <img src="./assets/activity.png" alt="Activity logo">
                             <h4>Activity Log</h4>
                         </div>
-                        <button id="clr-history-btn"
-                            class="btn btn-action btn-primary rounded-lg px-5 py-6.5 text-white font-normal text-xl bg-[#3752FD]">Clear
-                            History</button>
-                        <div id="task-complete-message">
+                        <div>
+                            <button id="clr-history-btn"
+                                class="btn btn-action btn-primary rounded-lg px-5 py-6.5 text-white font-normal text-xl bg-[#3752FD]">Clear
+                                History</button>
                         </div>
                     </div>
+                    <hr class="border-t-2 border-dashed border-[#3752FD] opacity-20" />
+                    <div id="task-complete-message" class="flex-row justify-items-center p-4 mt-0"></div>
                 </div>
             </div>
         </section>

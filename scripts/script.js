@@ -27,27 +27,24 @@ const colors = [
   ]
 
 function setInitialTotalCompletedTaskCount(count) {
-    document.getElementById('completed-task-count').innerText = addPrecedingZero(count)
+    document.getElementById('completed-task-count').textContent = count
 }
 
 function setInitialTaskCount() {
-    let taskCount = document.getElementsByClassName('completed-btn').length;
-    taskCount = addPrecedingZero(taskCount);
-    document.getElementById('task-count').innerText = taskCount
+    let taskCount = document.getElementsByClassName('completed-btn').length
+    document.getElementById('task-count').textContent = taskCount
 }
 
 function setTodaysDate() {
     const today = new Date();
     const calenderDiv = document.getElementById('calender-today');
-
-    calenderDiv.firstElementChild.innerText = today.toLocaleDateString('en-US', weekdayFromat) + ' ,'
-    calenderDiv.lastElementChild.innerText = today.toLocaleDateString('en-US', dateFormat).replace(',', '')
+    calenderDiv.firstElementChild.textContent = today.toLocaleDateString('en-US', weekdayFromat) + ' ,'
+    calenderDiv.lastElementChild.textContent = today.toLocaleDateString('en-US', dateFormat).replace(',', '')
 }
 
 function updateCount(elementId, cnt) {
-    let taskCount = parseInt(document.getElementById(elementId).innerText) + cnt
-    taskCount = addPrecedingZero(taskCount)
-    document.getElementById(elementId).innerText = taskCount
+    let taskCount = parseInt(document.getElementById(elementId).textContent) + cnt
+    document.getElementById(elementId).textContent = taskCount
 }
 
 function getRandomcolor() {
@@ -56,26 +53,22 @@ function getRandomcolor() {
     return color;
 }
 
-function addPrecedingZero(num) {
-    return num.toLocaleString('en-US', {minimumIntegerDigits: 2})
-}
-
 function createMessageElement(item) {
     const clickTime = new Date().toLocaleTimeString('en-US', timeFormat)
-    const taskTitle = item.parentElement.parentElement.previousElementSibling.previousElementSibling.firstElementChild.innerText
+    const taskTitle = item.parentElement.parentElement.previousElementSibling.previousElementSibling.firstElementChild.textContent
     const taskCompleteMessage = 'You have Completed The Task ' + taskTitle + ' at ' + clickTime
     const taskCompleteMessageDiv = document.getElementById('task-complete-message')
     const taskCompleteMessageElement = document.createElement('p')
     taskCompleteMessageElement.textContent = taskCompleteMessage
     taskCompleteMessageElement.classList.add('bg-rootBackground', 'p-2', 'text-left', 'rounded-md', 'mt-4', 'text-sm')
-    taskCompleteMessageDiv.appendChild(taskCompleteMessageElement)
+    taskCompleteMessageDiv.append(taskCompleteMessageElement)
 }
 
 function onClickCompletedButton(event) {
     event.preventDefault()
     this.disabled = true
     alert("Board Updated Successfully");
-    if (document.getElementById('task-count').innerText == '01') {
+    if (document.getElementById('task-count').textContent == '1') {
         alert('congrats!!! You have completed all the current task');
     }
     updateCount('task-count', -1)

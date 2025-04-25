@@ -12,14 +12,14 @@
           --color-rootBackground: #F4F7FF;
           --color-rootTextColor: #00303C
         }
-      </style>
+    </style>
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body class="h-screen min-w-full">
     <main class="container mx-auto">
         <nav class="mb-6 mt-6">
-            <div class="flex justify-between navbar shadow-sm rounded-2xl border-1 min-h-24 bg-white">
+            <div class="flex justify-between navbar shadow-sm rounded-2xl min-h-24 bg-white">
                 <div class="flex justify-start items-center mt-6 mb-4.5">
                     <img class="ml-6" src="./assets/logo.png" alt="">
                     <h1 class="mx-auto ml-2 text-4xl font-light text-rootTextColor">Dev<b class="font-bold">Board</b>
@@ -28,195 +28,102 @@
                 <div class="flex justify-end mr-6">
                     <div>
                         <button id="back-to-desk"
-                            class="btn btn-action btn-primary rounded-lg px-5 py-5 text-white font-normal text-sm bg-[#3752FD]">Back to Desk</button>
+                            class="btn btn-action btn-primary rounded-lg px-5 py-5 text-white font-normal text-sm bg-[#3752FD]">Back
+                            to Desk</button>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <!-- <section>
+        <section>
             <div class="min-h-full flex justify-center items-center gap-5 w-full">
-                <div class="h-205 flex-row-reverse justify-start bg-white rounded-lg w-full">
-                    <div class="flex justify-evenly items-center gap-6 rounded-lg p-5 w-full">
-                        <div class="flex w-3/12 h-32 items-center rounded-xl bg-rootBackground p-5">
-                            <div class="relative w-16 h-16 mr-6">
-                                <div class="shadow-xl absolute w-18 h-18 bg-white rounded-full"></div>
-                                <img class="w-8 h-8 absolute left-5 top-5" src="./assets/checkbox.png" alt="" />
-                            </div>
-                            <div>
-                                <p class="text-lg font-light text-rootTextColor">Task Assigned</p>
-                                <h3 id="task-count" class="text-4xl font-bold text-rootTextColor">05</h3>
-                            </div>
-                        </div>
-                        <div
-                            class="flex w-6/12 h-32 items-center rounded-xl bg-linear-45 from-[#3752FD] to-[#9BA8F8] p-5">
-                            <img class="size-20 shrink-0" src="./assets/board.png" alt="Board Logo" />
-                            <div>
-                                <div id="discover-card" class="text-2xl font-medium text-white ml-6 hover:cursor-pointer">Discover Something <br>New Today!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex w-3/12 h-32 items-center rounded-xl bg-[#F4F7FF] p-5">
-                            <div class="relative w-16 h-16 mr-6">
-                                <div class="shadow-xl absolute w-18 h-18 bg-white rounded-full"></div>
-                                <img class="w-8 h-8 absolute left-5 top-5" src="./assets/calender.png" alt="" />
-                            </div>
-                            <div id="calender-today">
-                                <p class="text-rootTextColor text-2xl font-light">Wed ,</p>
-                                <h3 class="text-2xl font-semibold text-rootTextColor">Jul 28 2025</h3>
-                            </div>
+                <div class="h-205 flex flex-col justify-start rounded-lg w-full gap-6">
+                    <div class="rounded-lg w-full bg-white h-auto p-5">
+                        <h3 class="text-2xl font-semibold mb-4">Question-1: What are the different ways to select an
+                            element in the DOM?</h3>
+                        <hr class="border-t-2 border-dashed border-[#3752FD] opacity-20 mb-4" />
+                        <div class="text-gray-400 text-xl ml-5">
+                            <ul class="list-disc">
+                                <li>getElementById</li>
+                                <li>getElementsByClassName</li>
+                                <li>getElementsByTagName</li>
+                                <li>querySelector</li>
+                                <li>querySelectorAll</li>
+                                </ol>
                         </div>
                     </div>
-                    <div class="grid grid-cols-3 p-6 gap-9">
-                        <div class="bg-rootBackground rounded-md p-6">
-                            <div class="bg-white p-2 text-center w-28.5 rounded-md mb-4">
-                                <h3>ShopEase</h3>
-                            </div>
-                            <div class="text-2xl mx-auto items-center mb-4">
-                                <h3>Fix Mobile Button Issue</h3>
-                            </div>
-                            <div class="bg-white h-auto w-auto p-4 rounded-md mb-3.5">
-                                <h3 class="text-black text-sm">Debug using Chrome <br>DevTools, check for overlappi...
-                                </h3>
-                            </div>
-                            <div class="flex justify-between">
-                                <div>
-                                    <h4 class="text-sm text-rootTextColor">Deadline</h4>
-                                    <h4 class="text-rootTextColor">21 March 2025</h4>
-                                </div>
-                                <div>
-                                    <button
-                                        class="btn btn-action btn-primary rounded-lg px-5 py-5 text-white font-normal text-sm bg-[#3752FD] completed-btn">Completed</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-rootBackground rounded-md p-6">
-                            <div class="bg-white p-2 text-center w-28.5 rounded-md mb-4">
-                                <h3>CloudSync</h3>
-                            </div>
-                            <div class="text-2xl mx-auto items-center mb-4">
-                                <h3>Add Dark Mode</h3>
-                            </div>
-                            <div class="bg-white h-auto w-auto p-4 rounded-md mb-3.5">
-                                <h3 class="text-black text-sm">Store the user's preference in<br>localStorage, update
-                                    CSS vari...</h3>
-                            </div>
-                            <div class="flex justify-between">
-                                <div>
-                                    <h4 class="text-sm text-rootTextColor">Deadline</h4>
-                                    <h4 class="text-rootTextColor">25 March 2025</h4>
-                                </div>
-                                <div>
-                                    <button
-                                        class="btn btn-action btn-primary rounded-lg px-5 py-5 text-white font-normal text-sm bg-[#3752FD] completed-btn">Completed</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-rootBackground rounded-md p-6">
-                            <div class="bg-white p-2 text-center w-28.5 rounded-md mb-4">
-                                <h3>SwiftPay</h3>
-                            </div>
-                            <div class="text-2xl mx-auto items-center mb-4">
-                                <h3>Optimize Home page</h3>
-                            </div>
-                            <div class="bg-white h-auto w-auto p-4 rounded-md mb-3.5">
-                                <h3 class="text-black text-sm">Debug using Chrome <br>DevTools, check for overlappi...
-                                </h3>
-                            </div>
-                            <div class="flex justify-between">
-                                <div>
-                                    <h4 class="text-sm text-rootTextColor">Deadline</h4>
-                                    <h4 class="text-rootTextColor">31 March 2025</h4>
-                                </div>
-                                <div>
-                                    <button
-                                        class="btn btn-action btn-primary rounded-lg px-5 py-5 text-white font-normal text-sm bg-[#3752FD] completed-btn">Completed</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-rootBackground rounded-md p-6">
-                            <div class="bg-white p-2 text-center w-28.5 rounded-md mb-4">
-                                <h3>Meta</h3>
-                            </div>
-                            <div class="text-2xl mx-auto items-center mb-4">
-                                <h3>Add new emoji 🤲</h3>
-                            </div>
-                            <div class="bg-white h-auto w-auto p-4 rounded-md mb-3.5">
-                                <h3 class="text-black text-sm">Debug using Chrome <br>DevTools, check for overlappi...
-                                </h3>
-                            </div>
-                            <div class="flex justify-between">
-                                <div>
-                                    <h4 class="text-sm text-rootTextColor">Deadline</h4>
-                                    <h4 class="text-rootTextColor">01 April 2025</h4>
-                                </div>
-                                <div>
-                                    <button
-                                        class="btn btn-action btn-primary rounded-lg px-5 py-5 text-white font-normal text-sm bg-[#3752FD] completed-btn">Completed</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-rootBackground rounded-md p-6">
-                            <div class="bg-white p-2 text-center w-28.5 rounded-md mb-4">
-                                <h3>Google LLC</h3>
-                            </div>
-                            <div class="text-2xl mx-auto items-center mb-4">
-                                <h3>Integrate OpenAI API</h3>
-                            </div>
-                            <div class="bg-white h-auto w-auto p-4 rounded-md mb-3.5">
-                                <h3 class="text-black text-sm">Debug using Chrome <br>DevTools, check for overlappi...
-                                </h3>
-                            </div>
-                            <div class="flex justify-between">
-                                <div>
-                                    <h4 class="text-sm text-rootTextColor">Deadline</h4>
-                                    <h4 class="text-rootTextColor">08 April 2025</h4>
-                                </div>
-                                <div>
-                                    <button
-                                        class="btn btn-action btn-primary rounded-lg px-5 py-5 text-white font-normal text-sm bg-[#3752FD] completed-btn">Completed</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-rootBackground rounded-md p-6">
-                            <div class="bg-white p-2 text-center w-28.5 rounded-md mb-4">
-                                <h3>Glassdoor</h3>
-                            </div>
-                            <div class="text-2xl mx-auto items-center mb-4">
-                                <h3>Improve Job Searching</h3>
-                            </div>
-                            <div class="bg-white h-auto w-auto p-4 rounded-md mb-3.5">
-                                <h3 class="text-black text-sm">Debug using Chrome <br>DevTools, check for overlappi...
-                                </h3>
-                            </div>
-                            <div class="flex justify-between">
-                                <div>
-                                    <h4 class="text-sm text-rootTextColor">Deadline</h4>
-                                    <h4 class="text-rootTextColor">14 April 2025</h4>
-                                </div>
-                                <div>
-                                    <button
-                                        class="btn btn-action btn-primary rounded-lg px-5 py-5 text-white font-normal text-sm bg-[#3752FD] completed-btn">Completed</button>
-                                </div>
-                            </div>
+                    <div class="rounded-lg w-full bg-white h-auto p-5">
+                        <h3 class="text-2xl font-semibold mb-4">Question-2: What is the difference between innerHTML,
+                            innerText, and textContent ?</h3>
+                        <hr class="border-t-2 border-dashed border-[#3752FD] opacity-20 mb-4" />
+                        <div class="text-gray-400 text-xl ml-5">
+                            <ul class="list-disc">
+                                <li>innerHTML : innerHTML is to get or set the HTML content inside an element. It will
+                                    include the HTML tags.</li>
+                                <li>innerText: innerText is to get or set the text content of an element. It will
+                                    exclude the HTML tags.</li>
+                                <li>textContent: textContent is also to get or set thex content of an element. It will
+                                    also exclude the HTML tags.</li>
+                                </ol>
                         </div>
                     </div>
-                </div>
-                <div class="w-100 h-205 rounded-lg bg-white">
-                    <div class="flex-row justify-items-center p-5">
-                        <div class="flex justify-normal items-center mb-4 gap-4 text-2xl">
-                            <img src="./assets/activity.png" alt="Activity logo">
-                            <h4>Activity Log</h4>
-                        </div>
-                        <button id="clr-history-btn"
-                            class="btn btn-action btn-primary rounded-lg px-5 py-6.5 text-white font-normal text-xl bg-[#3752FD]">Clear
-                            History</button>
-                        <div id="task-complete-message">
+                    <div class="rounded-lg w-full bg-white h-auto p-5">
+                        <h3 class="text-2xl font-semibold mb-4">Question-3: What is event delegation in the DOM?</h3>
+                        <hr class="border-t-2 border-dashed border-[#3752FD] opacity-20 mb-4" />
+                        <h3 class="text-gray-400 text-xl">Event delegation is technique to attach a single event
+                            listener to a parent element instead of adding multiple event listener to child element.
+                            This technique is handly and help us write less js code. This technique works as js has
+                            concept called events Bubble Up that passes event from child to parent.</h3>
+                    </div>
+                    <div class="rounded-lg w-full bg-white h-auto p-5">
+                        <h3 class="text-2xl font-semibold mb-4">Question-4: What is event bubbling in the DOM?</h3>
+                        <hr class="border-t-2 border-dashed border-[#3752FD] opacity-20 mb-4" />
+                        <h3 class="text-gray-400 text-xl">When a event is triggerd in a chiled element it bubbles up
+                            through its parents, grandparents, etc. all the way up to root element. JS utilizes event
+                            bubble up for event delegation.</h3>
+                    </div>
+                    <div class="rounded-lg w-full bg-white h-auto p-5">
+                        <h3 class="text-2xl font-semibold mb-4">Question-5: How do you create, add, and remove elements
+                            using JavaScript?</h3>
+                        <hr class="border-t-2 border-dashed border-[#3752FD] opacity-20 mb-4" />
+                        <div class="text-gray-400 text-xl ml-5">
+                            <ol class="list-decimal">
+                                <li>create element
+                                    <ul class="list-inside list-disc">
+                                        <li>
+                                            document.createElement()
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>add element
+                                    <ul class="list-inside list-disc">
+                                        <li>
+                                            element.appendChild(newElement)
+                                        </li>
+                                        <li>
+                                            element.append(newElement)
+                                        </li>
+                                        <li>
+                                            element.insertBefore(newElement, element.firstChild)
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>remove element
+                                    <ul class="list-inside list-disc">
+                                        <li>
+                                            element.removeChild(childToRemove)
+                                        </li>
+                                        <li>
+                                            element.remove()
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
     </main>
 
     <script src="./scripts/blog.js"></script>
