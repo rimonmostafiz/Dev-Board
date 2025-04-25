@@ -100,6 +100,11 @@ function onClickBackroundColorButton(e) {
     rootHtml.classList.add(color);
 }
 
+function onClickDiscoverCard(e) {
+    e.preventDefault
+    window.location.href = 'blog.html'
+}
+
 function handleCompletedButtonClickEvent() {
     const completedButtons = document.getElementsByClassName('completed-btn')
     for (const item of completedButtons) {
@@ -116,9 +121,14 @@ function handleBackgroundColorChangeButtonClickEvent() {
     document.getElementById('backgroun-color-btn').addEventListener('click', onClickBackroundColorButton)
 }
 
+function handleDiscoverCardClickEvent() {
+    document.getElementById('discover-card').addEventListener('click', onClickDiscoverCard)
+}
+
 setInitialTaskCount()
 setTodaysDate()
 setInitialTotalCompletedTaskCount(0)
 handleCompletedButtonClickEvent()
 handleCleanHistoryButtonClickEvent()
 handleBackgroundColorChangeButtonClickEvent()
+handleDiscoverCardClickEvent()
