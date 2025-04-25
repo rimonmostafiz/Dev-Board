@@ -95,7 +95,7 @@ function onClickBackroundColorButton(e) {
 
 function onClickDiscoverCard(e) {
     e.preventDefault
-    window.location.href = 'blog.html'
+    window.location.href = './blog.html'
 }
 
 function handleCompletedButtonClickEvent() {
